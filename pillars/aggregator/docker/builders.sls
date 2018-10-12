@@ -1,6 +1,6 @@
 docker:
   containers:
-    # LEDE.
+    # OpenWrt only.
     builderar71xx_generic_lede:
       image: otvorenamreza/openwrt-builder
       tag: 18.06.1_ar71xx_generic
