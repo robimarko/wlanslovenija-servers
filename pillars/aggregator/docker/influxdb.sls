@@ -1,7 +1,7 @@
 docker:
   containers:
     influxdb:
-      image: tozd/influxdb
+      image: otvorenamreza/docker-influxdb
       network_mode:
         name: nodewatcher
       volumes:
