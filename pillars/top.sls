@@ -1,4 +1,4 @@
 base:
-  'aggregator':
-    - aggregator
+  'nodes':
+    - nodes
 
