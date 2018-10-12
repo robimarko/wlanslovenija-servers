@@ -1,4 +1,4 @@
 base:
-  'nodes':
-    - nodes
+  'nodewatcher':
+    - nodewatcher
 
