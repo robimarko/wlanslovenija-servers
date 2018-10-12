@@ -10,24 +10,13 @@ docker:
       networks:
         - id: td-vpn0
           ips:
-            - address: 10.254.0.8/16
+            - address: 10.31.0.16/16
         - id: td-vpn1
           ips:
-            - address: 10.254.0.6/16
+            - address: 10.31.0.17/16
         - id: td-vpn2
           ips:
-            - address: 10.254.0.9/16
-    # OLSR routing protocol.
-    olsrd:
-      image: wlanslovenija/router-olsrd
-      capabilities:
-        - NET_ADMIN
-      environment:
-        ROUTER_MAIN_IP: 10.254.0.8
-        ROUTER_INTERFACES: td-vpn0 td-vpn1
-      network_mode:
-        type: container
-        container: mesh-network
+            - address: 10.31.0.18/16
     # Babel routing protocol.
     babeld:
       image: wlanslovenija/router-babeld
