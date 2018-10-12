@@ -1,3 +1,3 @@
 include:
-  - aggregator.network
-  - aggregator.docker
+  - nodewatcher.network
+  - nodewatcher.docker
