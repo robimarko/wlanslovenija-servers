@@ -172,8 +172,7 @@ docker:
       SECRET_KEY = os.environ.get('SECRET_KEY')
 
       ADMINS = (
-        ('Jernej Kos', 'jernej@kos.mx'),
-        ('Mitar', 'mitar.nodewatcher@tnode.com'),
+        ('Robert Marko', 'robimarko@gmail.com'),
       )
 
       MANAGERS = ADMINS
@@ -189,7 +188,7 @@ docker:
           }
       }
 
-      TIME_ZONE = 'Europe/Ljubljana'
+      TIME_ZONE = 'Europe/Zagreb'
 
       MEDIA_ROOT = '/media'
       STATIC_ROOT = '/static'
