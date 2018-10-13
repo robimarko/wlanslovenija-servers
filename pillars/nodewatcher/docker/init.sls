@@ -1,4 +1,4 @@
-docker.version: auto
+docker.version: None
 
 include:
   - nodewatcher.docker.tunneldigger
