@@ -7,7 +7,7 @@ network:
       - 8.8.8.8
       - 8.8.4.4
   interfaces:
-    p3p1:
+    ens3:
       ipv4:
         - type: static
           address: 45.76.90.160

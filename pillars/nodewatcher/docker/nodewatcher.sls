@@ -2,13 +2,13 @@
 docker:
   containers:
     nodewatcher-frontend:
-      image: wlanslovenija/nodewatcher-frontend
+      image: otvorenamreza/nodewatcher-frontend
       network_mode:
         name: nodewatcher
       environment:
         # We use a different virtual host for pushing monitoring data as we configure
         # TLS client authentication there.
-        - VIRTUAL_HOST: beta.wlan-si.net,nodes.wlan-si.net,push.nodes.wlan-si.net
+        - VIRTUAL_HOST: beta.otvorenamreza.org,nodewatcher.otvorenamreza.org,push.nodewatcher.otvorenamreza.org
           VIRTUAL_URL: /
           VIRTUAL_LETSENCRYPT: "true"
         - nodewatcher
@@ -16,40 +16,40 @@ docker:
       config:
         nodewatcher: /code/nodewatcher/settings_production.py
       files:
-        /srv/storage/ssl/push.nodes.wlan-si.net_nonssl.conf: |
+        /srv/storage/ssl/push.nodewatcher.otvorenamreza.org_nonssl.conf: |
           # Allow push without SSL (needed for simple sensors). There is still a
           # per-node configuration that determines whether this should be allowed.
           location /push/http/ {
-            proxy_pass http://push.nodes.wlan-si.net-u;
+            proxy_pass http://push.nodewatcher.otvorenamreza.org-u;
           }
-        /srv/storage/ssl/push.nodes.wlan-si.net_ssl.conf: |
+        /srv/storage/ssl/push.nodewatcher.otvorenamreza.org_ssl.conf: |
           # Setup client authentication. Allow authentication with any certificate
           # as all verification is done by the nodewatcher modules.
           ssl_verify_client optional_no_ca;
 
           # Accept push requests.
           location ~ ^/push/http[/$] {
-            proxy_pass http://push.nodes.wlan-si.net-u;
+            proxy_pass http://push.nodewatcher.otvorenamreza.org-u;
           }
 
           # Redirect all other requests to the main site.
           location ~ / {
-            return 301 https://nodes.wlan-si.net$request_uri;
+            return 301 https://nodewatcher.otvorenamreza.org$request_uri;
           }
-        /srv/storage/ssl/beta.wlan-si.net_ssl.conf: |
+        /srv/storage/ssl/beta.otvorenamreza.org_ssl.conf: |
           # Redirect push requests to its proper virtual host.
           location /push/http/ {
-            return 301 https://push.nodes.wlan-si.net$request_uri;
+            return 301 https://push.nodewatcher.otvorenamreza.org$request_uri;
           }
 
           # Redirect all requests to main site.
           location ~ / {
-            return 301 https://nodes.wlan-si.net$request_uri;
+            return 301 https://nodewatcher.otvorenamreza.org$request_uri;
           }
-        /srv/storage/ssl/nodes.wlan-si.net_ssl.conf: |
+        /srv/storage/ssl/nodewatcher.otvorenamreza.org_ssl.conf: |
           # Redirect push requests to its proper virtual host.
           location /push/http/ {
-            return 301 https://push.nodes.wlan-si.net$request_uri;
+            return 301 https://push.nodewatcher.otvorenamreza.org$request_uri;
           }
       volumes:
         /srv/storage/nodewatcher/media:
@@ -64,7 +64,7 @@ docker:
           user: nobody
           group: nogroup
     nodewatcher-generator:
-      image: wlanslovenija/nodewatcher-generator
+      image: otvorenamreza/nodewatcher-generator
       network_mode:
         name: nodewatcher
       environment:
@@ -83,7 +83,7 @@ docker:
           user: nobody
           group: nogroup
     nodewatcher-monitor:
-      image: wlanslovenija/nodewatcher-monitor
+      image: otvorenamreza/nodewatcher-monitor
       network_mode:
         type: container
         container: mesh-network
@@ -103,7 +103,7 @@ docker:
           user: nobody
           group: nogroup
     nodewatcher-monitorq:
-      image: wlanslovenija/nodewatcher-monitorq
+      image: otvorenamreza/nodewatcher-monitorq
       network_mode:
         type: container
         container: mesh-network
@@ -127,39 +127,17 @@ docker:
       DJANGO_SETTINGS_MODULE: nodewatcher.settings_production
       SECRET_KEY: |
         -----BEGIN PGP MESSAGE-----
-        Version: GnuPG v2.0.22 (GNU/Linux)
+        Version: GnuPG v1
 
-        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
-        =vFkj
+        hQEMA1azKk3jGwQJAQf/UXUOxYyrPX5/rliOIXuU56tT7gW3jev3F47vP4rk0jiD
+        xlwviGelgoq3AVCf6ggf8ph7Yp3qTtpnHcZmZ07sXPkrhmkSJozpxkxz2It7bJ6t
+        bncVoZWr2IYvr5RAvXorupEaraYRukZo1kWzOkhZESLwEsCWP1cZtyZhn33y/lxz
+        /a1JjHv6zB+e2oAiUOoikG3t1hag/rkYUV7w0r6n2MZpDM1r8yk0WjPwiTcVrxzS
+        9QiPbXvjSeUAvnG6L7AINzwkMrB3mzNg1nFVdwNo/rA85OMpwnDXMjWxnkxOAr+a
+        tNqOcDt9pHh9CTx89MPtxbCiE9E/kswOtp9r+HUPh9JtASF0Fp6r99yqmnJMt/RM
+        wKT0APsC8AyO1q4ytiC/K4YM6pVwb2MVPCL13cRDqlO8KbqMaPraaSqa16IrTAML
+        XoCYIqHR3SciIr0WwGzqnIjgLINB6aC8lGtwuHpX5hcLYsiJbGKCb70oEtslWQ==
+        =PAhz
         -----END PGP MESSAGE-----
   configs:
     nodewatcher: |
@@ -193,7 +171,7 @@ docker:
       MEDIA_ROOT = '/media'
       STATIC_ROOT = '/static'
 
-      EMAIL_HOST = 'mail.tnode.com'
+      EMAIL_HOST = 'smtp.gmail.com'
       EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
       BROKER_URL = 'redis://redis:6379/0'
@@ -218,7 +196,7 @@ docker:
       OLSRD_MONITOR_HOST = '127.0.0.1'
       OLSRD_MONITOR_PORT = 2006
 
-      MONITOR_HTTP_PUSH_HOST = 'push.nodes.wlan-si.net'
+      MONITOR_HTTP_PUSH_HOST = 'push.nodewatcher.otvorenamreza.org'
 
       MEASUREMENT_SOURCE_NODE = '5dcf6dae-9246-47ec-8ba5-f864d8f88778'
 
@@ -272,11 +250,11 @@ docker:
       NODEUPGRADE_SERVER_PUBLIC_KEY = 'ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOzKxvjv/RFDOd2BE4HgxvqNsMljGiSRim7KUQNI/ifjvBe4Z325DBe78OJ6P9d2kf6omHUxnLi1oPu+YaEdDDk='
 
       NETWORK.update({
-        'NAME': 'wlan slovenija',
-        'HOME': 'https://wlan-si.net',
-        'CONTACT': 'open@wlan-si.net',
-        'CONTACT_PAGE': 'http://wlan-si.net/contact/',
-        'DESCRIPTION': 'open wireless network of Slovenia',
+        'NAME': 'Otvorena Mreza',
+        'HOME': 'https://otvorenamreza.org',
+        'CONTACT': 'info@otvorenamreza.org',
+        'CONTACT_PAGE': 'https://www.otvorenamreza.org/javite-nam-se/',
+        'DESCRIPTION': 'Open wireless community of Croatia',
         'FAVICON_FILE': 'wlansi/images/favicon.ico',
       })
 
