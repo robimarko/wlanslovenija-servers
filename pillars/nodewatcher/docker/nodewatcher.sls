@@ -2,7 +2,7 @@
 docker:
   containers:
     nodewatcher-frontend:
-      image: otvorenamreza/nodewatcher-frontend
+      image: robimarko/nodewatcher-frontend
       network_mode:
         name: nodewatcher
       environment:
@@ -64,7 +64,7 @@ docker:
           user: nobody
           group: nogroup
     nodewatcher-generator:
-      image: otvorenamreza/nodewatcher-generator
+      image: robimarko/nodewatcher-generator
       network_mode:
         name: nodewatcher
       environment:
@@ -83,7 +83,7 @@ docker:
           user: nobody
           group: nogroup
     nodewatcher-monitor:
-      image: otvorenamreza/nodewatcher-monitor
+      image: robimarko/nodewatcher-monitor
       network_mode:
         type: container
         container: mesh-network
@@ -103,7 +103,7 @@ docker:
           user: nobody
           group: nogroup
     nodewatcher-monitorq:
-      image: otvorenamreza/nodewatcher-monitorq
+      image: robimarko/nodewatcher-monitorq
       network_mode:
         type: container
         container: mesh-network
