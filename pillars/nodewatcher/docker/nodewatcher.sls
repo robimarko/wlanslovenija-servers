@@ -258,54 +258,24 @@ docker:
       NODEUPGRADE_SERVER = '10.31.0.16'
       NODEUPGRADE_PORT = 28932
       NODEUPGRADE_USER = 'fileserver'
-      NODEUPGRADE_PRIVATE_KEY = |
-        -----BEGIN PGP MESSAGE-----
-        Version: GnuPG v1
-
-        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
-        M+XcsNB1Ec4p5OJAmNkRXB5KmU/t
-        =zBuh
-        -----END PGP MESSAGE-----
-      NODEUPGRADE_SERVER_PUBLIC_KEY = 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKV/HjziXwhsQLFtsyQX3ybKxQ/w2Sa8ymPyHcbsO42iaNjdgAGMpiy0c6N3MwfcGbsGKLdA1/x6xQLsh7VIvG5B45F1IcIucVBut8ip3cYme1Ny1sUc4P0o0ZusdwFIweVF1Y6shT2XMWBycA3Ln4zVUdosBO5k7nZDbFZZZ1ybobB0tCXchSqcRvflKoOYLSAIfl0TbMb+58Y1AcaH59WrQ6HDgaH1lQa2D5JQ25ZXxHzahYkxB96sZOg72Xw52uqiT/LlWDgXe6/GzBRGMX5K/wUextc4PPAT/VGzSPuhBt8gj5TEb3oNGRNlxqYaiv9ctyFyNZurAgTuqKstcx nodeupgrade@otvorenamreza.org'
-
+      NODEUPGRADE_PRIVATE_KEY = """
+      AAAAB3NzaC1yc2EAAAADAQABAAABAQC1M6TGKaUX9k6B/NJPwpJlKaTEu9LBaEiMVLz+9NaKituc
+      8IB9Ynm/r07rRq65AXSu+bHBO9431TPiRRQ3oak7nlXhIWTUL2oH4DnwFbmFm5/NkFdP9p+PYcn9
+      YnhmWGAGFFdKGDuiGHcbVH/bulvZobBC2EDvDOlg1iA2/Xx9Jdgyq8t6M0iIxaEQydGxNa/2JpfR
+      u4O9uHq3+LZjM6i4/X2IY9JYFPUUMhnZ80uHBrjWHXZgBEyF9aT01PXvGejxJ5D4UDVe2UT6Tbl1
+      /w/zEq9BnNt1ZggXUz7S/h2xrlZMrVMDDEnBE2Mbq1tHXyHeEoclLMG9RIpF/osG1Ja3AAABADb5
+      WxVPzyms7XacaIYQRu/wKXASd8d7xv7kOo6zY1+W7zf281SXCs7v9eaFhD7WxTrMwHQaoLmZsmsE
+      gDS8lCZlTDLIOdnyJJ4NFibTwHxbkakBEKxO62vJxElelZ6fU0qk4zK0lWsBNymQglX8fR9S4bH2
+      AAVGiot5iz6Du0AQNrpZA2gdkoNHR01oITmZOzpQ1g7aU4EE0eni2lwW4GJsugvU4sx51MTKEoSZ
+      1U+zlN+L8hMPcoaSfv6OOW616ct8eopdXi7mOkZ/87UFjUY6WtySYO90n6YjN9LLpD2iLlHyIfjZ
+      uwu7mFYebvH9HtO+6d6G99JexdmrNhcrXTkAAACBAPEJtenGdpWlonhTbJe9x3QKkQtsMwC41OmD
+      d7AEVI/8thRRIRFUMpAoThzAD7q37wnw7/I1j6tAawZQRxhmqHPbC69ro/fcuhg/MDOs7rFKXXtn
+      shhInQwUjP2pU6g8SN9RRntuC+7hTSHRB25jaW/7weJt1Jpt0xIgE4JGeivLAAAAgQDAcxZHdD/J
+      hiQ+/ggFsYdhvauCR9Z66oQfkkCRX5BOcoph4fMjQxgUxwfUYXVUCx5e9q19LKnWDB4FnnLNNTm9
+      Reyg1xSZvl98FcR8sh3l3ZdvA6feW1xd6vg8rpWtdnJag1iuKY+HpgU256Ub6yf8/M2J+zmicg6s
+      lWebI407RQ==
+      """
+      NODEUPGRADE_SERVER_PUBLIC_KEY = 'ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOzKxvjv/RFDOd2BE4HgxvqNsMljGiSRim7KUQNI/ifjvBe4Z325DBe78OJ6P9d2kf6omHUxnLi1oPu+YaEdDDk='
       NETWORK.update({
         'NAME': 'Otvorena Mreza',
         'HOME': 'https://otvorenamreza.org',
