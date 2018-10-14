@@ -181,7 +181,7 @@ docker:
       EMAIL_PORT = '587'
       EMAIL_USE_TLS = True
       EMAIL_HOST_USER = 'email@otvorenamreza.org'
-      EMAIL_HOST_PASSWORD = |
+      EMAIL_HOST_PASSWORD: |
         -----BEGIN PGP MESSAGE-----
         Version: GnuPG v1
 
