@@ -11,12 +11,6 @@ docker:
         - id: td-vpn0
           ips:
             - address: 10.31.0.16/16
-        - id: td-vpn1
-          ips:
-            - address: 10.31.0.17/16
-        - id: td-vpn2
-          ips:
-            - address: 10.31.0.18/16
     # Babel routing protocol.
     babeld:
       image: wlanslovenija/router-babeld
@@ -31,7 +25,7 @@ docker:
         # Only allow a small subset of capabilities.
         - NET_ADMIN
       environment:
-        ROUTER_INTERFACES: td-vpn0 td-vpn1 td-vpn2
+        ROUTER_INTERFACES: td-vpn0
         BABELD_DISABLE_ANNOUNCE: 1
       network_mode:
         type: container
