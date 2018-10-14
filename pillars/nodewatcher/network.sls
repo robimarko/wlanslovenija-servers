@@ -14,6 +14,6 @@ network:
           netmask: 255.255.254.0
           gateway: 45.76.90.1
 mailer:
-  relay: mail.tnode.com
+  relay: smtp.gmail.com
   root_alias:
-    - monitoring@unico.re
+    - robimarko@gmail.com
