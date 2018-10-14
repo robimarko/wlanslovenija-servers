@@ -6,7 +6,7 @@ docker:
         name: nodewatcher
       environment:
         - MAILTO: robimarko@gmail.com
-          REMOTES: mail.tnode.com
+          REMOTES: smtp.gmail.com
           LETSENCRYPT_EMAIL: robimarko@gmail.com
       ports:
         80/tcp:
