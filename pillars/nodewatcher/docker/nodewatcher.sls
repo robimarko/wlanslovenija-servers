@@ -181,25 +181,7 @@ docker:
       EMAIL_PORT = '587'
       EMAIL_USE_TLS = True
       EMAIL_HOST_USER = 'email@otvorenamreza.org'
-      EMAIL_HOST_PASSWORD: |
-        -----BEGIN PGP MESSAGE-----
-        Version: GnuPG v1
 
-        hQIMA2+rYdYI/PftAQ/+PYndNW6tf0wiCxT0Mr4o7QpYlyGJEOVkfHKXvS83toIl
-        bFnNd1uaqjzAi68X9Jt0/7Yb9Y1TRzCubf0Zq+GL/QqmW7aYDFvTtyaejiSkTc5P
-        8FhRUVTt/z1SdTauM4K+bN85hbs6IpZJnUxMH2lGKhi89L8zh/0wkQl2QyAGv9J4
-        Usoo9+eM6UBYkXxWvy6pAg6WEuclGB46C8lbghEb1rvp9jVNkHauDiF4dhqXYOHw
-        hGu1elsltvE6xUoIqBi/vTtm+erQg1K5VpUqiqsT3pTcrFLiTHuOhTyMLpPq+CSD
-        cDTZD5lWCjazf9QkgyHmPNnm/O0wzVNSDnEOqMrzLWVFx+lbdm9ObhVU5GWk74ko
-        KZh2+rNnfmOqorO/W+tl7VfMa43WIpApvETjz5Gk58IcMXwWJqTVhNcFyp17pChj
-        fEYLlV2+GuGUUaMK0JNxPMf2p+QY9PbQkGh5Q+zCP+qA6A0ffGSlc1aUsfSfdRSm
-        hQuqS7locFkB9IklGJPc24sLK2fpdDHjnTQHWxZlpYx5zPE+b21CecQxRkMLU+8+
-        zlECotfH5w9VFM5S91CjqEUP1TaSe6sc95QmJsDTwrVY+gFlFVKxSn9oZFL9sBGx
-        +HIdwx2RfrdGaFZamhkg3nLxg5J0V26+XXRi8QasHNjINkxIHCacids5uK1swCzS
-        TwFy8uDs8HtwyfNHTvh6FbZJYuKD1G//liM/4W5S5oSu82SivLRA7DXFuZiEcLc/
-        9fw3tVr5GAN551N0Yc1lMvXpDGZGMgKnj/svcsZc5SE=
-        =SpS3
-        -----END PGP MESSAGE-----
       EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
       BROKER_URL = 'redis://redis:6379/0'
