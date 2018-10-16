@@ -10,7 +10,8 @@ docker:
         # TLS client authentication there.
         - VIRTUAL_HOST: beta.otvorenamreza.org,nodewatcher.otvorenamreza.org,push.nodewatcher.otvorenamreza.org
           VIRTUAL_URL: /
-          VIRTUAL_LETSENCRYPT: "true"
+          LETSENCRYPT_HOST: beta.otvorenamreza.org,nodewatcher.otvorenamreza.org,push.nodewatcher.otvorenamreza.org
+          LETSENCRYPT_EMAIL: robimarko@gmail.com
         - nodewatcher
         - postgresql
       config:
