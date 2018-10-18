@@ -19,7 +19,6 @@ docker:
           bind: /etc/nginx/certs
         /var/run/docker.sock:
           bind: /tmp/docker.sock
-          type: socket
         /srv/storage/vhost.d:
           bind: /etc/nginx/vhost.d
     letsencrypt:
@@ -32,6 +31,5 @@ docker:
             bind: /etc/nginx/certs
           /var/run/docker.sock:
             bind: /var/run/docker.sock
-            type: socket
           /srv/storage/vhost.d:
             bind: /etc/nginx/vhost.d
