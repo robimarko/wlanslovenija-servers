@@ -8,50 +8,14 @@ docker:
       environment:
         # We use a different virtual host for pushing monitoring data as we configure
         # TLS client authentication there.
-        - VIRTUAL_HOST: beta.otvorenamreza.org,nodewatcher.otvorenamreza.org,push.nodewatcher.otvorenamreza.org
+        - VIRTUAL_HOST: nodes.otvorenamreza.org
           VIRTUAL_URL: /
-          LETSENCRYPT_HOST: beta.otvorenamreza.org,nodewatcher.otvorenamreza.org,push.nodewatcher.otvorenamreza.org
+          LETSENCRYPT_HOST: nodes.otvorenamreza.org
           LETSENCRYPT_EMAIL: robimarko@gmail.com
         - nodewatcher
         - postgresql
       config:
         nodewatcher: /code/nodewatcher/settings_production.py
-      files:
-        /srv/storage/ssl/push.nodewatcher.otvorenamreza.org_nonssl.conf: |
-          # Allow push without SSL (needed for simple sensors). There is still a
-          # per-node configuration that determines whether this should be allowed.
-          location /push/http/ {
-            proxy_pass http://push.nodewatcher.otvorenamreza.org-u;
-          }
-        /srv/storage/ssl/push.nodewatcher.otvorenamreza.org_ssl.conf: |
-          # Setup client authentication. Allow authentication with any certificate
-          # as all verification is done by the nodewatcher modules.
-          ssl_verify_client optional_no_ca;
-
-          # Accept push requests.
-          location ~ ^/push/http[/$] {
-            proxy_pass http://push.nodewatcher.otvorenamreza.org-u;
-          }
-
-          # Redirect all other requests to the main site.
-          location ~ / {
-            return 301 https://nodewatcher.otvorenamreza.org$request_uri;
-          }
-        /srv/storage/ssl/beta.otvorenamreza.org_ssl.conf: |
-          # Redirect push requests to its proper virtual host.
-          location /push/http/ {
-            return 301 https://push.nodewatcher.otvorenamreza.org$request_uri;
-          }
-
-          # Redirect all requests to main site.
-          location ~ / {
-            return 301 https://nodewatcher.otvorenamreza.org$request_uri;
-          }
-        /srv/storage/ssl/nodewatcher.otvorenamreza.org_ssl.conf: |
-          # Redirect push requests to its proper virtual host.
-          location /push/http/ {
-            return 301 https://push.nodewatcher.otvorenamreza.org$request_uri;
-          }
       volumes:
         /srv/storage/nodewatcher/media:
           bind: /media
