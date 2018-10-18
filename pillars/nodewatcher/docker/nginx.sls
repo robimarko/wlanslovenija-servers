@@ -1,7 +1,8 @@
 docker:
   containers:
     nginx-proxy:
-      image: robimarko/nginx-proxy
+      image: jwilder/nginx-proxy
+      tag: "alpine"
       network_mode:
         name: nodewatcher
       labels:
@@ -23,6 +24,7 @@ docker:
           bind: /etc/nginx/vhost.d
     letsencrypt:
       image: jrcs/letsencrypt-nginx-proxy-companion
+      tag: "v1.9.1"
       network_mode:
         name: nodewatcher
         volumes:
