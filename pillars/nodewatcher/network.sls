@@ -9,10 +9,7 @@ network:
   interfaces:
     ens3:
       ipv4:
-        - type: static
-          address: 108.61.179.247
-          netmask: 255.255.254.0
-          gateway: 108.61.178.1
+        - type: dhcp
 mailer:
   relay: smtp.gmail.com
   root_alias:
