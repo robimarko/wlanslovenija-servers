@@ -9,10 +9,8 @@ docker:
         - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy: "true" 
       ports:
         80/tcp:
-          ip: 108.61.179.247
           port: 80
         443/tcp:
-          ip: 108.61.179.247
           port: 443
       volumes:
         /srv/storage/ssl:
