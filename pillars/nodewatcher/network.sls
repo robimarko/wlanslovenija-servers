@@ -7,7 +7,7 @@ network:
       - 8.8.8.8
       - 8.8.4.4
   interfaces:
-    ens3:
+    ens18:
       ipv4:
         - type: dhcp
 mailer:
