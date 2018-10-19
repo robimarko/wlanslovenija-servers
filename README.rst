@@ -15,6 +15,7 @@ You should create a ``config/roster`` file with something like::
       user: <username>
       passwd: <password>
       sudo: True
+      tty: True
 
 Then you can sync the state of a server by doing::
 
