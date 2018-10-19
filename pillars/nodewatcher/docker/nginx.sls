@@ -10,8 +10,10 @@ docker:
       ports:
         80/tcp:
           port: 80
+          ip: 193.198.68.156
         443/tcp:
           port: 443
+          ip: 193.198.68.156
       volumes:
         /srv/storage/ssl:
           bind: /etc/nginx/certs
