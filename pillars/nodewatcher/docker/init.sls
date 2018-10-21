@@ -9,4 +9,3 @@ include:
   - nodewatcher.docker.nodewatcher
   - nodewatcher.docker.fileserver
   - nodewatcher.docker.builders
-  - nodewatcher.docker.nginx
