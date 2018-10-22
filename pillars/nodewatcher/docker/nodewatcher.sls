@@ -173,7 +173,7 @@ docker:
 
       MONITOR_HTTP_PUSH_HOST = 'push.nodewatcher.otvorenamreza.org'
 
-      MEASUREMENT_SOURCE_NODE = '5dcf6dae-9246-47ec-8ba5-f864d8f88778'
+      MEASUREMENT_SOURCE_NODE = '97988fcb-cda4-409e-aea9-99fb7f052863'
 
       USE_HTTPS = True
       CSRF_COOKIE_SECURE = USE_HTTPS
@@ -202,7 +202,7 @@ docker:
       -----END PUBLIC KEY-----
       """
 
-      NODEUPGRADE_SERVER = '10.31.0.16'
+      NODEUPGRADE_SERVER = '10.31.0.0'
       NODEUPGRADE_PORT = 28932
       NODEUPGRADE_USER = 'fileserver'
       NODEUPGRADE_PRIVATE_KEY = """
