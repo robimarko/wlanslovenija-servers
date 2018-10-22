@@ -229,12 +229,8 @@ docker:
         'CONTACT': 'info@otvorenamreza.org',
         'CONTACT_PAGE': 'https://www.otvorenamreza.org/javite-nam-se/',
         'DESCRIPTION': 'Open wireless community of Croatia',
-        'FAVICON_FILE': 'wlansi/images/favicon.ico',
+        'FAVICON_FILE': 'favicon.ico',
       })
-
-      EMAIL_SUBJECT_PREFIX = '[' + NETWORK['NAME'] + '] '
-      DEFAULT_FROM_EMAIL = NETWORK['CONTACT']
-      SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
       ALLOWED_HOSTS = os.environ.get('VIRTUAL_HOST', '127.0.0.1').split(',')
 
