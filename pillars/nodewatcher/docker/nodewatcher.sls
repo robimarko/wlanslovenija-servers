@@ -142,13 +142,6 @@ docker:
       MEDIA_ROOT = '/media'
       STATIC_ROOT = '/static'
 
-      EMAIL_HOST = 'smtp.gmail.com'
-      EMAIL_PORT = '587'
-      EMAIL_USE_TLS = True
-      EMAIL_HOST_USER = 'email@otvorenamreza.org'
-
-      EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
       BROKER_URL = 'redis://redis:6379/0'
       CELERY_RESULT_BACKEND = BROKER_URL
 
@@ -170,8 +163,6 @@ docker:
 
       OLSRD_MONITOR_HOST = '127.0.0.1'
       OLSRD_MONITOR_PORT = 2006
-
-      MONITOR_HTTP_PUSH_HOST = 'push.nodewatcher.otvorenamreza.org'
 
       MEASUREMENT_SOURCE_NODE = '5dcf6dae-9246-47ec-8ba5-f864d8f88778'
 
@@ -231,10 +222,6 @@ docker:
         'DESCRIPTION': 'Open wireless community of Croatia',
         'FAVICON_FILE': 'wlansi/images/favicon.ico',
       })
-
-      EMAIL_SUBJECT_PREFIX = '[' + NETWORK['NAME'] + '] '
-      DEFAULT_FROM_EMAIL = NETWORK['CONTACT']
-      SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
       ALLOWED_HOSTS = os.environ.get('VIRTUAL_HOST', '127.0.0.1').split(',')
 
