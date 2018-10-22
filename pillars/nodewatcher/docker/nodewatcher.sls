@@ -8,9 +8,9 @@ docker:
       environment:
         # We use a different virtual host for pushing monitoring data as we configure
         # TLS client authentication there.
-        - VIRTUAL_HOST: nodes.otvorenamreza.org
+        - VIRTUAL_HOST: nodes-test.otvorenamreza.org
           VIRTUAL_URL: /
-          LETSENCRYPT_HOST: nodes.otvorenamreza.org
+          LETSENCRYPT_HOST: nodes-test.otvorenamreza.org
           LETSENCRYPT_EMAIL: robimarko@gmail.com
         - nodewatcher
         - postgresql
