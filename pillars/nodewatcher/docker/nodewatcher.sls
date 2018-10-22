@@ -164,7 +164,9 @@ docker:
       OLSRD_MONITOR_HOST = '127.0.0.1'
       OLSRD_MONITOR_PORT = 2006
 
-      MEASUREMENT_SOURCE_NODE = '5dcf6dae-9246-47ec-8ba5-f864d8f88778'
+      MONITOR_HTTP_PUSH_HOST = '127.0.0.1'
+
+      MEASUREMENT_SOURCE_NODE = '97988fcb-cda4-409e-aea9-99fb7f052863'
 
       USE_HTTPS = True
       CSRF_COOKIE_SECURE = USE_HTTPS
@@ -193,7 +195,7 @@ docker:
       -----END PUBLIC KEY-----
       """
 
-      NODEUPGRADE_SERVER = '10.31.0.16'
+      NODEUPGRADE_SERVER = '10.31.0.0'
       NODEUPGRADE_PORT = 28932
       NODEUPGRADE_USER = 'fileserver'
       NODEUPGRADE_PRIVATE_KEY = """
@@ -220,7 +222,7 @@ docker:
         'CONTACT': 'info@otvorenamreza.org',
         'CONTACT_PAGE': 'https://www.otvorenamreza.org/javite-nam-se/',
         'DESCRIPTION': 'Open wireless community of Croatia',
-        'FAVICON_FILE': 'wlansi/images/favicon.ico',
+        'FAVICON_FILE': 'favicon.ico',
       })
 
       ALLOWED_HOSTS = os.environ.get('VIRTUAL_HOST', '127.0.0.1').split(',')
