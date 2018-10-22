@@ -171,7 +171,7 @@ docker:
       OLSRD_MONITOR_HOST = '127.0.0.1'
       OLSRD_MONITOR_PORT = 2006
 
-      MONITOR_HTTP_PUSH_HOST = 'push.nodewatcher.otvorenamreza.org'
+      MONITOR_HTTP_PUSH_HOST = '127.0.0.1'
 
       MEASUREMENT_SOURCE_NODE = '97988fcb-cda4-409e-aea9-99fb7f052863'
 
