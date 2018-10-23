@@ -1,4 +1,4 @@
-docker.release: docker-ce
+docker.version: auto
 
 include:
   - nodewatcher.docker.tunneldigger
