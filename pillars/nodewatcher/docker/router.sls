@@ -13,7 +13,7 @@ docker:
             - address: 10.31.0.0/16
     # Babel routing protocol.
     babeld:
-      image: robimarko/router-babeld
+      image: robimarko/docker-router-babeld
       # Privileges needed because Docker does otherwise not allow setting network sysctls.
       # See: https://github.com/docker/docker/issues/4717#issuecomment-98653017
       privileged: true
