@@ -52,14 +52,14 @@ docker:
         BUILDER_PUBLIC_KEY: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKV/HjziXwhsQLFtsyQX3ybKxQ/w2Sa8ymPyHcbsO42iaNjdgAGMpiy0c6N3MwfcGbsGKLdA1/x6xQLsh7VIvG5B45F1IcIucVBut8ip3cYme1Ny1sUc4P0o0ZusdwFIweVF1Y6shT2XMWBycA3Ln4zVUdosBO5k7nZDbFZZZ1ybobB0tCXchSqcRvflKoOYLSAIfl0TbMb+58Y1AcaH59WrQ6HDgaH1lQa2D5JQ25ZXxHzahYkxB96sZOg72Xw52uqiT/LlWDgXe6/GzBRGMX5K/wUextc4PPAT/VGzSPuhBt8gj5TEb3oNGRNlxqYaiv9ctyFyNZurAgTuqKstcx root@temp-for-install
     builderx86_64_lede:
       image: otvorenamreza/openwrt-builder
-      tag: 18.06.1_x86_64
+      tag: 18.06.1_x86_64_eoip
       network_mode:
         name: nodewatcher
       environment:
         BUILDER_PUBLIC_KEY: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKV/HjziXwhsQLFtsyQX3ybKxQ/w2Sa8ymPyHcbsO42iaNjdgAGMpiy0c6N3MwfcGbsGKLdA1/x6xQLsh7VIvG5B45F1IcIucVBut8ip3cYme1Ny1sUc4P0o0ZusdwFIweVF1Y6shT2XMWBycA3Ln4zVUdosBO5k7nZDbFZZZ1ybobB0tCXchSqcRvflKoOYLSAIfl0TbMb+58Y1AcaH59WrQ6HDgaH1lQa2D5JQ25ZXxHzahYkxB96sZOg72Xw52uqiT/LlWDgXe6/GzBRGMX5K/wUextc4PPAT/VGzSPuhBt8gj5TEb3oNGRNlxqYaiv9ctyFyNZurAgTuqKstcx root@temp-for-install
     builderipq40xx_lede:
       image: otvorenamreza/openwrt-builder
-      tag: 18.06.1_ipq40xx_generic
+      tag: 18.06.1_ipq40xx_generic_eoip
       network_mode:
         name: nodewatcher
       environment:
