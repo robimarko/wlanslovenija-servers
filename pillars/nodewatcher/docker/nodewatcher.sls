@@ -169,22 +169,6 @@ docker:
       DEFAULT_FROM_EMAIL = 'email@otvorenamreza.org'
       SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
-      LEAFLET_CONFIG = {
-          'TILES': [
-              # OpenStreetMap.
-              (
-                  _('OSM'),
-                  '//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                  '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              ),
-          ],
-          'DEFAULT_CENTER': (45.101, 16.359),
-          'DEFAULT_ZOOM': 7,
-          'MIN_ZOOM': 3,
-          'MAX_ZOOM': 18,
-          'RESET_VIEW': False,
-      }
-
       MEDIA_ROOT = '/media'
       STATIC_ROOT = '/static'
 
