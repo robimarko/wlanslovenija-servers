@@ -157,7 +157,8 @@ docker:
       }
 
       TIME_ZONE = 'Europe/Zagreb'
-      
+      DEFAULT_COUNTRY = 'HR'
+
       EMAIL_HOST = 'smtp.gmail.com'
       EMAIL_HOST_USER = 'email@otvorenamreza.org'
       EMAIL_PORT = '587'
@@ -166,6 +167,22 @@ docker:
       EMAIL_SUBJECT_PREFIX = '[Otvorena mreza] '
       DEFAULT_FROM_EMAIL = 'email@otvorenamreza.org'
       SERVER_EMAIL = DEFAULT_FROM_EMAIL
+
+      LEAFLET_CONFIG = {
+          'TILES': [
+              # OpenStreetMap.
+              (
+                  _('OSM'),
+                  '//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                  '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              ),
+          ],
+          'DEFAULT_CENTER': (45.101, 16.359),
+          'DEFAULT_ZOOM': 7,
+          'MIN_ZOOM': 3,
+          'MAX_ZOOM': 18,
+          'RESET_VIEW': False,
+      }
 
       MEDIA_ROOT = '/media'
       STATIC_ROOT = '/static'
@@ -250,7 +267,7 @@ docker:
         'CONTACT': 'info@otvorenamreza.org',
         'CONTACT_PAGE': 'https://www.otvorenamreza.org/javite-nam-se/',
         'DESCRIPTION': 'Open wireless community of Croatia',
-        'FAVICON_FILE': 'favicon.ico',
+        'FAVICON_FILE': 'favicon.svg',
       })
 
       ALLOWED_HOSTS = os.environ.get('VIRTUAL_HOST', '127.0.0.1').split(',')
