@@ -9,7 +9,7 @@ docker:
       capabilities:
         - NET_ADMIN
       environment:
-        TUNNELDIGGER_UUID: 97988fcb-cda4-409e-aea9-99fb7f052863
+        TUNNELDIGGER_UUID: df693e61-abfa-4323-aca0-78c6ca290680
         TUNNELDIGGER_BROKERS: 77.234.148.154:8942
         TUNNELDIGGER_BRIDGE: td-vpn0
       networks:
