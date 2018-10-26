@@ -110,6 +110,25 @@ docker:
         LrE+5w==
         =s4ug
         -----END PGP MESSAGE-----
+      EMAIL_PASSWORD: |
+        -----BEGIN PGP MESSAGE-----
+        Version: GnuPG v1
+
+        hQIMA2+rYdYI/PftAQ//ahfN5uuAXjmi1qGiKhQ353BWBQLuzbSNtw88N/V6blIL
+        kAaY4wBY9vckahzdO2vnsC+SKT+CgR/Wot9eN/S8XNFXNbIeitJ70W7SD33+3kTO
+        72B+DpUuD1MJjzjZ8IoYEDlEmDE6fg7Y/rW2YLBn6+sYhfT4dYFJtrFTiznawTrN
+        PerHdYgXRF2qx5FtYs8e+pp6xk3oXbL9bKKBiWWBERc0s8BHD93gcZZwXKjXBazs
+        a5g+EQJ1wJlSouxBFY0SjvwOcpDSU1HrsJerlnmlFsdM/lcQdsW5QX5uzWMQNXYM
+        bIgFyY4LEt3NLfEllWZW74YzOlvfuP4zdwMGGyvS/bhfGisJ78VBDiLBbVid/ETB
+        7+9FChwAxz+NzwZbWoRxv2mYEfnnv3Ujvr7XtBR6qPapbZJD0c2Zm/FM8v4WdxSU
+        sUmle2DFR2rUj7CdBb/47V+qN8xtbTP6/yQqz/If3EWibPoBl6JtGWFKHsRaPyp2
+        beWR21ivccxxKOkyBFV5telM5uVQqHRU2J7RCDbMIv+smvcjQizTx7zi+l2dg9FY
+        mmuoSwoBU0DerVQ26EVv9H4XBcANklD4BwKlEL/dPOQpryxGDIHkn7saeUEPuxDI
+        poc+BTFLa0VJ7O6eDx/kTEuQdrbQk5SFkIPswvSnOEh4lExQlKPL/frACo6NsnzS
+        TwHIfHxZVekByf1MSOthjzunRfKKeEj0eyZ7cv2CplJcgFtlyyo+niw5Ns33HgCl
+        9FfS2nVHGMxYtgQg6VvWiU2QxslCs1EghOvyYXXekn0=
+        =UkZ1
+        -----END PGP MESSAGE-----
   configs:
     nodewatcher: |
       from .settings import *
@@ -138,6 +157,15 @@ docker:
       }
 
       TIME_ZONE = 'Europe/Zagreb'
+      
+      EMAIL_HOST = 'smtp.gmail.com'
+      EMAIL_HOST_USER = 'email@otvorenamreza.org'
+      EMAIL_PORT = '587'
+      EMAIL_USE_TLS = 'True'
+      EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+      EMAIL_SUBJECT_PREFIX = '[Otvorena mreza] '
+      DEFAULT_FROM_EMAIL = 'email@otvorenamreza.org'
+      SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
       MEDIA_ROOT = '/media'
       STATIC_ROOT = '/static'
