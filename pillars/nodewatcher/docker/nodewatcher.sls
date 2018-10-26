@@ -131,6 +131,7 @@ docker:
         -----END PGP MESSAGE-----
   configs:
     nodewatcher: |
+      # -*- coding: utf-8 -*-
       from .settings import *
 
       DEBUG = False
