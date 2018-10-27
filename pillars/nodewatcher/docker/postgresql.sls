@@ -2,13 +2,13 @@
 docker:
   containers:
     postgresql:
-      image: otvorenamreza/docker-postgresql
-      tag: "10"
+      image: tozd/postgresql
+      tag: "9.5"
       network_mode:
         name: nodewatcher
       volumes:
         /srv/storage/postgresql:
-          bind: /var/lib/postgresql/10/main
+          bind: /var/lib/postgresql/9.5/main
           user: 102
           group: 106
         /srv/log/postgresql:
