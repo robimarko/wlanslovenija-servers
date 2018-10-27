@@ -252,7 +252,7 @@ docker:
         'CONTACT': 'info@otvorenamreza.org',
         'CONTACT_PAGE': 'https://www.otvorenamreza.org/javite-nam-se/',
         'DESCRIPTION': 'Open wireless community of Croatia',
-        'FAVICON_FILE': 'favicon.svg',
+        'FAVICON_FILE': 'favicon.ico',
       })
 
       ALLOWED_HOSTS = os.environ.get('VIRTUAL_HOST', '127.0.0.1').split(',')
