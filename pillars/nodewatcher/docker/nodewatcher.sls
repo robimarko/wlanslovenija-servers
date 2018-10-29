@@ -156,7 +156,7 @@ docker:
               'PORT': '5432',
           }
       }
-      POSTGIS_VERSION = (2, 1)
+      POSTGIS_VERSION = (2, 4)
 
       TIME_ZONE = 'Europe/Zagreb'
       DEFAULT_COUNTRY = 'HR'
