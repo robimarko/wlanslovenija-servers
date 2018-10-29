@@ -10,7 +10,7 @@ docker:
       networks:
         - id: td-vpn0
           ips:
-            - address: 10.31.0.0/16
+            - address: 10.31.0.16/16
     # Babel routing protocol.
     babeld:
       image: robimarko/docker-router-babeld
