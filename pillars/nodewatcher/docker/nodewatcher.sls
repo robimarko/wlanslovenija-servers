@@ -156,6 +156,7 @@ docker:
               'PORT': '5432',
           }
       }
+      POSTGIS_VERSION = (2, 1)
 
       TIME_ZONE = 'Europe/Zagreb'
       DEFAULT_COUNTRY = 'HR'
@@ -196,7 +197,7 @@ docker:
 
       MONITOR_HTTP_PUSH_HOST = '127.0.0.1'
 
-      MEASUREMENT_SOURCE_NODE = '8be7ae96-dffb-4b78-8722-846ffd30c4d5'
+      MEASUREMENT_SOURCE_NODE = 'deb28ab9-e26d-46a0-a69a-d62b829704ac'
 
       USE_HTTPS = True
       CSRF_COOKIE_SECURE = USE_HTTPS
