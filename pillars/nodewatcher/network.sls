@@ -1,7 +1,7 @@
 network:
   system:
     hostname: nodewatcher
-    fqdn: nodewatcher.otvorenamreza.org
+    fqdn: nodes.otvorenamreza.org
   dns:
     ipv4:
       - 8.8.8.8
@@ -10,7 +10,3 @@ network:
     ens18:
       ipv4:
         - type: dhcp
-mailer:
-  relay: smtp.gmail.com
-  root_alias:
-    - robimarko@gmail.com
