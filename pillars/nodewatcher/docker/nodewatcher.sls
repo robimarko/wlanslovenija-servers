@@ -6,8 +6,6 @@ docker:
       network_mode:
         name: nodewatcher
       environment:
-        # We use a different virtual host for pushing monitoring data as we configure
-        # TLS client authentication there.
         - VIRTUAL_HOST: nodes.otvorenamreza.org
           VIRTUAL_URL: /
           LETSENCRYPT_HOST: nodes.otvorenamreza.org
@@ -798,7 +796,7 @@ docker:
       }
 
       NETWORK = {
-          'NAME': 'Otvorena Mreza',
+          'NAME': 'Otvorena mreza',
           'HOME': 'https://otvorenamreza.org',
           'CONTACT': 'info@otvorenamreza.org',
           'CONTACT_PAGE': 'https://www.otvorenamreza.org/javite-nam-se/',
